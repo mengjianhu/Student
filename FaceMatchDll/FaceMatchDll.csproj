@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73F9DEF4-9ABD-49D9-9986-B56D2BDEC207}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FaceMatchDll</RootNamespace>
+    <AssemblyName>FaceMatchDll</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>E:\人脸识别学习\虹软科技\ArcfaceDemo_CSharp_2.2-master\ArcSoftFace\ArcSoftFace\bin\Debug\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="FYEntity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\防疫一站式核验系统\bin\Debug\FYEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="FYTemperature, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\防疫一站式核验系统\bin\Debug\FYTemperature.dll</HintPath>
+    </Reference>
+    <Reference Include="FYUtils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\防疫一站式核验系统\bin\Debug\FYUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="IDCardRead, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\防疫一站式核验系统\bin\Debug\IDCardRead.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASFFunctions.cs" />
+    <Compile Include="Entity\FaceTrackUnit.cs" />
+    <Compile Include="Entity\ImageInfo.cs" />
+    <Compile Include="FaceMatch.cs" />
+    <Compile Include="Models\ASF_AgeInfo.cs" />
+    <Compile Include="Models\ASF_Face3DAngle.cs" />
+    <Compile Include="Models\ASF_FaceFeature.cs" />
+    <Compile Include="Models\ASF_GenderInfo.cs" />
+    <Compile Include="Models\ASF_ImagePixelFormat.cs" />
+    <Compile Include="Models\ASF_LivenessInfo.cs" />
+    <Compile Include="Models\ASF_MultiFaceInfo.cs" />
+    <Compile Include="Models\ASF_OrientCode.cs" />
+    <Compile Include="Models\ASF_OrientPriority.cs" />
+    <Compile Include="Models\ASF_SingleFaceInfo.cs" />
+    <Compile Include="Models\ASF_VERSION.cs" />
+    <Compile Include="Models\DetectionMode.cs" />
+    <Compile Include="Models\FaceEngineMask.cs" />
+    <Compile Include="Models\MRECT.cs" />
+    <Compile Include="Utils\FaceUtil.cs" />
+    <Compile Include="Utils\ImageUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AttendanceEntity\AttendanceEntity.csproj">
+      <Project>{e6662f8b-a40f-42ed-8c5a-ee469554e4b7}</Project>
+      <Name>AttendanceEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AttendanceService\AttendanceService.csproj">
+      <Project>{f3076095-47a5-43b9-8787-8f08571f49a7}</Project>
+      <Name>AttendanceService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DreamHelper\DreamHelper.csproj">
+      <Project>{d70f0df9-68ac-4f0b-94af-37d884e102f4}</Project>
+      <Name>DreamHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
